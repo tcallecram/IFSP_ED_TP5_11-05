@@ -4,7 +4,7 @@
 using namespace std;
 
 
-#define MAX 30
+#define MAX 5
 
 struct Pilha {
 	int qtde;
@@ -18,7 +18,7 @@ Pilha* init() {
 	return p;
 }
 
-*Pilha RecebeValores (Pilha *p){
+int RecebeValores (Pilha *p){
     int cont = 0;
 	int i;
 	int n=1;
@@ -37,11 +37,21 @@ Pilha* init() {
 		}
 		
 		cont = v;
+		podeEmpilhar
 	
 	}
     
 }
 
+void MostraValores(Pilha *p){
+	int i;
+	
+	for(int i=p->qtde-1; i>=0; --i) {
+		cout << p->elementos[i] << endl;
+	}
+	cout << "----------------------" << endl;
+	
+}
 
 int push(Pilha *p, float v) {
 	int podeEmpilhar = (p->qtde < MAX);
@@ -53,10 +63,17 @@ int push(Pilha *p, float v) {
 
 int main(int argc, char** argv){
 	
+	Pilha *pilhaFloat;
+	pilhaFloat = new Pilha();
+	pilhaFloat = init();
+	
 	cout<<"---------------------" << endl;
 	cout<<"| Escreva 30 números |"<< endl;
 	cout<<"---------------------" << endl;
 	
+	RecebeValores(pilhaFloat);
+	
+	MostraValores(pilhaFloat);
 
 	
 	
