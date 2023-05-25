@@ -19,27 +19,20 @@ Pilha* init() {
 }
 
 int RecebeValores (Pilha *p){
-    int cont = 0;
-	int i;
-	int n=1;
-	int v, teste;
-		
-    
-    	for (i=0; i<MAX; i++){
-		
-		cout << n << "º valor: "<< endl;
-		cin >> v;
-		n++;
+    int v=-1, teste, n;
 	
-		if (cont > v){
+		
+		while(v == -1 || valor <= p->elementos[p->qtd-1]){
+			
+			cout << n << "º valor: "<< endl;
+			cin >> v;
+			n++;
+			
+			if (cont > v){
 			cout << "O próximo valor deve ser sempre maior que o anterior. Escreva novamente: " << endl;
 			cin >> v;
+			}
 		}
-		
-		cont = v;
-		podeEmpilhar
-	
-	}
     
 }
 
